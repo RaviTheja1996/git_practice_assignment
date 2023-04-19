@@ -1,13 +1,23 @@
-let n = 23;
-let count = 0;
-for (let i = 1; i <= n; i++) {
-        if (n % i == 0) {
-                count++;
-        }
 
+let str = "121";
+
+let start = 0;
+let end = str.length - 1;
+
+let flag = true;
+
+while (start <= end) {
+  if (str[start] !== str[end]) {
+    flag = false; 
+    break;
+  }
+  
+  start++;
+  end--;
 }
-if (count == 1) {
-        console.log('prime number')
+
+if (flag) {
+  console.log(str," is a palindrome.");
 } else {
-        console.log('Not a prime number')
+  console.log(str," is not a palindrome.");
 }
